@@ -4,8 +4,8 @@
   "description": "gD.jrzy — Football Lives Here. Official e-commerce website & standalone Control Room for Garment District.",
   "main": "index.html",
   "scripts": {
-    "start": "npx serve .",
-    "dev": "npx serve ."
+    "start": "node server.js",
+    "dev": "node server.js"
   },
   "keywords": [
     "gd-jrzy",
