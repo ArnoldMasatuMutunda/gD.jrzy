@@ -185,7 +185,7 @@ function updateLivePreview() {
   if (uploadedImages.length > 0) {
     previewImg.src = uploadedImages[0];
   } else {
-    previewImg.src = 'assets/jerseys/jersey-01.jpg';
+    previewImg.src = 'assets/jerseys/brazil-t90-blue.webp';
   }
 }
 
@@ -222,7 +222,7 @@ async function handleQuickDropSubmit(e) {
   let imagesToSave = [...uploadedImages];
   if (imagesToSave.length === 0) {
     showToast('Notice: No photos uploaded. Attaching default studio sample.');
-    imagesToSave = ['assets/jerseys/jersey-01.jpg'];
+    imagesToSave = ['assets/jerseys/brazil-t90-blue.webp'];
   }
 
   const payload = {
@@ -312,7 +312,7 @@ function renderInventoryTable(products) {
   }
 
   tbody.innerHTML = products.map(p => {
-    const imgUrl = (p.images && p.images.length > 0) ? p.images[0] : 'assets/jerseys/jersey-01.jpg';
+    const imgUrl = (p.images && p.images.length > 0) ? p.images[0] : 'assets/jerseys/brazil-t90-blue.webp';
     const s = p.stock || { S: 0, M: 0, L: 0, XL: 0 };
     const totalStock = Object.values(s).reduce((a, b) => a + Number(b), 0);
     const statusClass = p.status === 'Published' ? 'published' : (p.status === 'Draft' ? 'draft' : 'sold');
@@ -320,7 +320,7 @@ function renderInventoryTable(products) {
     return `
       <tr>
         <td>
-          <img class="table-thumb" src="${imgUrl}" alt="${p.name}" onerror="this.src='assets/jerseys/jersey-01.jpg'">
+          <img class="table-thumb" src="${imgUrl}" alt="${p.name}" onerror="this.src='assets/jerseys/brazil-t90-blue.webp'">
         </td>
         <td>
           <div style="font-weight: 700; color: var(--admin-text);">${p.name}</div>

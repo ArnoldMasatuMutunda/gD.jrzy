@@ -111,7 +111,7 @@ function renderProducts() {
   }
 
   grid.innerHTML = filteredProducts.map(p => {
-    const imgUrl = (p.images && p.images.length > 0) ? p.images[0] : 'assets/jerseys/jersey-01.jpg';
+    const imgUrl = (p.images && p.images.length > 0) ? p.images[0] : 'assets/jerseys/brazil-t90-blue.webp';
     const totalStock = p.totalStock !== undefined ? p.totalStock : Object.values(p.stock || {}).reduce((a, b) => a + Number(b), 0);
     const isSoldOut = totalStock <= 0;
 
@@ -127,7 +127,7 @@ function renderProducts() {
         <div class="product-img-wrap">
           <span class="product-tag">${isSoldOut ? 'Sold Out' : (p.tag || p.category)}</span>
           <span class="product-lot-badge">${p.lotNumber || 'GDJ-001'}</span>
-          <img class="product-real-img" src="${imgUrl}" alt="${p.name}" loading="lazy" onerror="this.src='assets/jerseys/jersey-01.jpg'">
+          <img class="product-real-img" src="${imgUrl}" alt="${p.name}" loading="lazy" onerror="this.src='assets/jerseys/brazil-t90-blue.webp'">
           <button class="product-quick-view" onclick="openProductModal(${p.id})">
             ${isSoldOut ? 'View Details' : 'Select Size ↗'}
           </button>
@@ -165,12 +165,12 @@ function renderHeroCarousel() {
 
   const topItems = allProducts.slice(0, 5);
   const p = topItems[currentHeroIndex] || allProducts[0];
-  const imgUrl = (p.images && p.images.length > 0) ? p.images[0] : 'assets/jerseys/jersey-01.jpg';
+  const imgUrl = (p.images && p.images.length > 0) ? p.images[0] : 'assets/jerseys/brazil-t90-blue.webp';
 
   container.innerHTML = `
     <div class="hero-card" onclick="openProductModal(${p.id})">
       <span class="hero-badge">${p.tag || 'Season Archive'}</span>
-      <img class="hero-card-img" src="${imgUrl}" alt="${p.name}" onerror="this.src='assets/jerseys/jersey-01.jpg'">
+      <img class="hero-card-img" src="${imgUrl}" alt="${p.name}" onerror="this.src='assets/jerseys/brazil-t90-blue.webp'">
       <div class="hero-card-info">
         <div>
           <h3>${p.name}</h3>
@@ -214,14 +214,14 @@ async function openProductModal(id) {
   document.getElementById('modalCondition').textContent = p.condition || 'Brand New';
 
   // Gallery
-  const images = (p.images && p.images.length > 0) ? p.images : ['assets/jerseys/jersey-01.jpg'];
+  const images = (p.images && p.images.length > 0) ? p.images : ['assets/jerseys/brazil-t90-blue.webp'];
   const mainImg = document.getElementById('modalMainImg');
   mainImg.src = images[0];
 
   const thumbsContainer = document.getElementById('modalThumbnails');
   thumbsContainer.innerHTML = images.map((img, idx) => `
     <div class="modal-thumb ${idx === 0 ? 'active' : ''}" onclick="setModalMainImg('${img}', this)">
-      <img src="${img}" alt="Thumbnail ${idx + 1}" onerror="this.src='assets/jerseys/jersey-01.jpg'">
+      <img src="${img}" alt="Thumbnail ${idx + 1}" onerror="this.src='assets/jerseys/brazil-t90-blue.webp'">
     </div>
   `).join('');
 
@@ -351,7 +351,7 @@ function addToCartFromModal() {
     }
     existing.qty += 1;
   } else {
-    const img = (currentModalProduct.images && currentModalProduct.images.length > 0) ? currentModalProduct.images[0] : 'assets/jerseys/jersey-01.jpg';
+    const img = (currentModalProduct.images && currentModalProduct.images.length > 0) ? currentModalProduct.images[0] : 'assets/jerseys/brazil-t90-blue.webp';
     cart.push({
       id: currentModalProduct.id,
       lotNumber: currentModalProduct.lotNumber,
@@ -429,7 +429,7 @@ function renderCart() {
 
     return `
       <div class="cart-item-row">
-        <img class="cart-item-img" src="${item.image}" alt="${item.name}" onerror="this.src='assets/jerseys/jersey-01.jpg'">
+        <img class="cart-item-img" src="${item.image}" alt="${item.name}" onerror="this.src='assets/jerseys/brazil-t90-blue.webp'">
         <div class="cart-item-details">
           <div class="cart-item-title">${item.name}</div>
           <div class="cart-item-meta">Size: <b>${item.size}</b> · ${item.lotNumber || 'GDJ'}</div>

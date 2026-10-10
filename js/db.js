@@ -5,102 +5,102 @@
  */
 
 const DB_NAME = 'gd_jrzy_commerce';
-const DB_VERSION = 1;
+const DB_VERSION = 2; // Incremented to upgrade stored items to verified matching jerseys
 const SYNC_CHANNEL = 'gd_jrzy_sync_channel';
 
-// Default initial catalog with real photography
+// Default initial catalog with 100% verified matching real photography
 const INITIAL_PRODUCTS = [
   {
     id: 1,
     lotNumber: 'GDJ-JRZY-001',
-    name: 'Brazil Away / Seleção 2024',
+    name: 'Brazil Total 90 Away / Ronaldo #9',
     team: 'Brazil',
     category: 'National',
     kitType: 'Away',
-    season: '2024/25',
-    priceINR: 1899,
-    priceTZS: 58000,
+    season: '2004/05',
+    priceINR: 1999,
+    priceTZS: 62000,
     stock: { S: 3, M: 5, L: 4, XL: 2 },
-    condition: 'Brand New with Tags',
-    images: ['assets/jerseys/jersey-01.jpg'],
-    description: 'A vibrant national-team colourway engineered with aerodynamic moisture-wicking jacquard. Styled for match days and everyday street rotation.',
-    fabric: '100% Recycled Poly Jacquard / Dri-FIT ADV finish',
-    tag: 'Fan Favourite',
+    condition: 'Mint / Like New',
+    images: ['assets/jerseys/brazil-t90-blue.webp'],
+    description: 'Iconic royal blue Nike Total 90 long sleeve edition with white contour piping and the historic center-circle #9. Tailored for Brazilian flair and streetwear styling.',
+    fabric: '100% Breathable Dri-FIT micro-mesh / Long sleeve ribbed cuffs',
+    tag: 'Archive Vault',
     status: 'Published',
     createdAt: '2026-09-20T10:00:00.000Z'
   },
   {
     id: 2,
     lotNumber: 'GDJ-JRZY-002',
-    name: 'Milan Rossoneri / Classic Edit',
-    team: 'AC Milan',
+    name: 'Inter Milan Away / Pirelli Sash 1997',
+    team: 'Inter Milan',
     category: 'Club',
-    kitType: 'Home',
-    season: '2023/24',
-    priceINR: 1999,
-    priceTZS: 62000,
+    kitType: 'Away',
+    season: '1997/98',
+    priceINR: 2199,
+    priceTZS: 68000,
     stock: { S: 2, M: 4, L: 3, XL: 1 },
     condition: 'Brand New with Tags',
-    images: ['assets/jerseys/jersey-02.jpg'],
-    description: 'Iconic red and black vertical stripes with matte dark trims. An immortal European football silhouette that transcends sportswear into luxury fashion.',
-    fabric: 'Ultra-light breathability weave with woven crest badge',
-    tag: 'Classic',
+    images: ['assets/jerseys/inter-milan-away-1997.jpg'],
+    description: 'Pristine white base with the asymmetrical blue and black vertical sash, polo button collar, and iconic horizontal Pirelli emblem. Ronaldo Il Fenomeno era classic.',
+    fabric: 'Heavyweight Jacquard knit with embroidered golden star crest',
+    tag: 'Cult Classic',
     status: 'Published',
     createdAt: '2026-09-21T11:00:00.000Z'
   },
   {
     id: 3,
     lotNumber: 'GDJ-JRZY-003',
-    name: 'Argentina Albiceleste / World Champions',
-    team: 'Argentina',
+    name: 'South Africa / Bafana Bafana Emerald',
+    team: 'South Africa',
     category: 'National',
     kitType: 'Home',
-    season: '2024/25',
-    priceINR: 1999,
-    priceTZS: 62000,
+    season: 'Heritage Edit',
+    priceINR: 1899,
+    priceTZS: 58000,
     stock: { S: 4, M: 6, L: 5, XL: 3 },
     condition: 'Brand New with Tags',
-    images: ['assets/jerseys/jersey-03.jpg'],
-    description: 'Celestial blue and pure bone stripes accented with golden champion detailing. Tailored modern fit with premium ventilation ribbing.',
-    fabric: 'Heat-sealed federation insignia / HEAT.RDY breathable mesh',
-    tag: 'New Drop',
+    images: ['assets/jerseys/south-africa-bafana-green.jpg'],
+    description: 'Deep emerald green with vertical heritage jacquard weaves, golden three stripes, and embroidered South African Football Association protea crest.',
+    fabric: 'Engineered performance poly with retro polo collar',
+    tag: 'African Heritage',
     status: 'Published',
     createdAt: '2026-09-22T09:30:00.000Z'
   },
   {
     id: 4,
     lotNumber: 'GDJ-JRZY-004',
-    name: 'Como Ivory / Heritage Edition',
-    team: 'Como 1907',
+    name: 'Ajax Amsterdam Long Sleeve / 1995',
+    team: 'Ajax Amsterdam',
     category: 'Club',
-    kitType: 'Third',
-    season: '2024/25',
-    priceINR: 2199,
-    priceTZS: 68000,
-    stock: { S: 2, M: 3, L: 2, XL: 1 },
-    condition: 'Brand New with Tags',
-    images: ['assets/jerseys/jersey-04.jpg'],
-    description: 'Lakeside Italian elegance translated into high-fashion knitwear. Off-white base with minimalist crest and golden subtle typographic accents.',
-    fabric: 'Refined double-knit polyester with micro-perforations',
-    tag: 'Limited Drop',
+    kitType: 'Home',
+    season: '1995/96',
+    priceINR: 1999,
+    priceTZS: 62000,
+    stock: { S: 2, M: 4, L: 2, XL: 1 },
+    condition: 'Mint / Like New',
+    images: ['assets/jerseys/ajax-retro-1995.jpg'],
+    description: 'Legendary white with red center block and vertical ABN AMRO sponsor typography. European champions era long-sleeve silhouette with Umbro ribbed collar.',
+    fabric: 'Silky retro pique knit with tonal woven Ajax crest details',
+    tag: 'European Champions',
     status: 'Published',
     createdAt: '2026-09-23T14:15:00.000Z'
   },
   {
     id: 5,
     lotNumber: 'GDJ-JRZY-005',
-    name: 'Real Madrid / Archive Cream Edit',
+    name: 'Real Madrid Home / Teka Era 2000',
     team: 'Real Madrid',
     category: 'Club',
-    kitType: 'Third',
-    season: '2024/25',
-    priceINR: 2299,
-    priceTZS: 71000,
+    kitType: 'Home',
+    season: '1999/00',
+    priceINR: 2099,
+    priceTZS: 65000,
     stock: { S: 3, M: 5, L: 3, XL: 2 },
     condition: 'Brand New with Tags',
-    images: ['assets/jerseys/jersey-05.jpg'],
-    description: 'Regal monochrome with bespoke collar and polo button closure. Built for runway aesthetics and matchday elegance.',
-    fabric: 'Engineered moisture management pique knit with embroidered crest',
+    images: ['assets/jerseys/real-madrid-teka-2000.jpg'],
+    description: 'Crisp Madrid white with navy collar and side panels, featuring the historic Teka chest sponsor and royal crest badge. La Octava Champions League winning look.',
+    fabric: 'High-density polyester with breathable mesh underarm inserts',
     tag: 'Archive Edit',
     status: 'Published',
     createdAt: '2026-09-24T16:00:00.000Z'
@@ -108,57 +108,57 @@ const INITIAL_PRODUCTS = [
   {
     id: 6,
     lotNumber: 'GDJ-JRZY-006',
-    name: 'Barcelona Blaugrana / Matchday 01',
-    team: 'FC Barcelona',
-    category: 'Club',
+    name: 'Mexico 1986 Retro / adidas Originals',
+    team: 'Mexico',
+    category: 'National',
     kitType: 'Home',
-    season: '2024/25',
-    priceINR: 1999,
-    priceTZS: 62000,
+    season: '1986 Classic',
+    priceINR: 1899,
+    priceTZS: 58000,
     stock: { S: 3, M: 4, L: 4, XL: 2 },
     condition: 'Brand New with Tags',
-    images: ['assets/jerseys/jersey-06.jpg'],
-    description: 'Split half-and-half classic Catalan palette celebrating 125 years of club legacy. Crisp finish and modern athletic drape.',
-    fabric: '100% High-gauge performance polyester',
-    tag: 'Cult Classic',
+    images: ['assets/jerseys/mexico-retro-1986.jpg'],
+    description: 'Vintage Mexico green with white winged polo collar, classic trefoil branding, and original Mexican Football Federation shield. A true streetwear wardrobe staple.',
+    fabric: '100% Breathable cotton-poly blend with Climalite feel',
+    tag: 'World Cup Vault',
     status: 'Published',
     createdAt: '2026-09-25T12:00:00.000Z'
   },
   {
     id: 7,
     lotNumber: 'GDJ-JRZY-007',
-    name: 'Netherlands Oranje / Retro 1988 Edit',
-    team: 'Netherlands',
-    category: 'National',
-    kitType: 'Retro',
-    season: '1988 Classic',
+    name: 'Celtic Glasgow Retro / Green Hoops 1995',
+    team: 'Celtic FC',
+    category: 'Club',
+    kitType: 'Home',
+    season: '1995/96',
     priceINR: 1799,
     priceTZS: 56000,
     stock: { S: 2, M: 3, L: 2, XL: 1 },
     condition: 'Mint / Like New',
-    images: ['assets/jerseys/jersey-07.jpg'],
-    description: 'The geometric shaded pattern that defined an entire era of streetwear culture. Loud, vibrant, and unapologetically football.',
-    fabric: 'Silky retro sheen polyester with ribbed V-neck',
-    tag: 'Retro Vault',
+    images: ['assets/jerseys/celtic-hoops-1995.jpg'],
+    description: 'Timeless green and white horizontal hoops with large centered Umbro diamond and classic four-leaf clover crest. Relaxed boxy streetwear cut.',
+    fabric: 'Patterned sheen jacquard knit with structured collar',
+    tag: 'Classic Hoops',
     status: 'Published',
     createdAt: '2026-09-26T15:30:00.000Z'
   },
   {
     id: 8,
     lotNumber: 'GDJ-JRZY-008',
-    name: 'Blue Heritage / No. 10 Archive',
-    team: 'Archive Club',
-    category: 'Classic',
-    kitType: 'Retro',
-    season: 'Archive',
-    priceINR: 1699,
-    priceTZS: 52000,
+    name: 'Nigeria Super Eagles / Atlanta 1996',
+    team: 'Nigeria',
+    category: 'National',
+    kitType: 'Home',
+    season: '1996 Gold',
+    priceINR: 1999,
+    priceTZS: 62000,
     stock: { S: 2, M: 4, L: 3, XL: 1 },
-    condition: 'Mint / Like New',
-    images: ['assets/jerseys/jersey-08.jpg'],
-    description: 'Deep cobalt blue with crisp white detailing and iconic back numeral. A staple vintage top tailored for relaxed campus and city outfits.',
-    fabric: 'Heavyweight retro weave jersey with stitched details',
-    tag: 'Archive Find',
+    condition: 'Brand New with Tags',
+    images: ['assets/jerseys/nigeria-super-eagles-1996.jpg'],
+    description: 'Vibrant green with center white panel, eagle crest and jagged lightning graphic patterns on sleeves. The kit that stunned the world to win Olympic Gold.',
+    fabric: 'Dri-FIT performance poly with ribbed collar and sleeve cuffs',
+    tag: 'Olympic Gold',
     status: 'Published',
     createdAt: '2026-09-27T18:00:00.000Z'
   }
@@ -241,10 +241,12 @@ class GDCommerceDB {
 
   async seedDefaultsIfEmpty() {
     const products = await this.getAllFromStore('products');
-    if (!products || products.length === 0) {
+    const hasLegacyImages = products && products.some(p => p.images && p.images[0] && p.images[0].includes('jersey-0'));
+    if (!products || products.length === 0 || hasLegacyImages) {
       for (const prod of INITIAL_PRODUCTS) {
         await this.putInStore('products', prod);
       }
+      localStorage.setItem('gd_products', JSON.stringify(INITIAL_PRODUCTS));
     }
     const settings = await this.getFromStore('settings', 'config');
     if (!settings) {
@@ -253,7 +255,8 @@ class GDCommerceDB {
   }
 
   seedLocalStorage() {
-    if (!localStorage.getItem('gd_products')) {
+    const existing = localStorage.getItem('gd_products');
+    if (!existing || existing.includes('jersey-0')) {
       localStorage.setItem('gd_products', JSON.stringify(INITIAL_PRODUCTS));
     }
     if (!localStorage.getItem('gd_settings')) {

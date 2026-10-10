@@ -50,9 +50,17 @@ This project is the production-ready implementation of **gD.jrzy**, the football
     │   ├── logo-primary.svg
     │   ├── logo-reversed.svg
     │   ├── logo-badge.svg
-    │   └── logo-wordmark.svg
+    │   ├── campaign-fit-the-kit.jpg
+    │   └── manifesto-culture.jpg
     └── jerseys/                   # Real photography vault for catalog jerseys
-        ├── jersey-01.jpg ... jersey-08.jpg
+        ├── brazil-t90-blue.webp
+        ├── inter-milan-away-1997.jpg
+        ├── south-africa-bafana-green.jpg
+        ├── ajax-retro-1995.jpg
+        ├── real-madrid-teka-2000.jpg
+        ├── mexico-retro-1986.jpg
+        ├── celtic-hoops-1995.jpg
+        └── nigeria-super-eagles-1996.jpg
 ```
 
 ---
