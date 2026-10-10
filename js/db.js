@@ -167,7 +167,7 @@ const INITIAL_PRODUCTS = [
 const DEFAULT_SETTINGS = {
   currency: 'INR', // 'INR' or 'TZS'
   exchangeRateINRtoTZS: 31.0,
-  whatsappNumber: '+255700000000',
+  whatsappNumber: '+255686513559',
   adminPasswordHash: 'change-me-before-launch',
   storeName: 'gD.jrzy',
   brandTagline: 'Football Lives Here.',
